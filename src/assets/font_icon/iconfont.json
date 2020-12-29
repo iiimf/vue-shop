@@ -1,0 +1,30 @@
+{
+  "id": "1620671",
+  "name": "我的图标库",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "7964497",
+      "name": "密码",
+      "font_class": "mima",
+      "unicode": "e62f",
+      "unicode_decimal": 58927
+    },
+    {
+      "icon_id": "1166147",
+      "name": "下载",
+      "font_class": "iconfontzhizuobiaozhun023146",
+      "unicode": "e694",
+      "unicode_decimal": 59028
+    },
+    {
+      "icon_id": "7141627",
+      "name": "person",
+      "font_class": "person",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1608796005333'); /* IE9 */
+  src: url('iconfont.eot?t=1608796005333#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAPMAAsAAAAAB+QAAAN9AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDHAqDEIMFATYCJAMQCwoABCAFhG0HVhsFB8gusG3Yk0CMmTvuWNEqth+wwBPi4XGM9v62E9HknsSARjKTSoJGKJQOKZA9k+9/ddp3lRKvpBLzFpYdheSnyCkATOW3lw/Ge/uNjG+/2273z1/u5qA7HpuOcKwwWpSGva93mlCE8R/atjjMDQ4qiHLIAh3kpHyp/p9jxivwYX5fuESVdT6P1NkoWgcUUZclfAeIN4zdRNAQTxOoNSiftNvZPw4hCjApEHeoYoGQjEppiA/VQmXFyiI+Q4Xq9DHgBT7xv49/FiKEpCIDZx291mGH5p/lB1rRAc7kXfgwnQHGOjKmgELcqDRdgiLPFKTW62+wAlSrlpiqow/9r3COIqqGIkP/8RJRCcTWgyXZm/lZYlYirmSFkMVnOUaCDyKplqOeAt85IOuf5sez1FMj1XR3R0S+DpO+fJpOPwwQ9vWmmxe3w9m/79Pl3T3+9PPq7OMIEY9RWDo2PDE1avtEp0/zOMYICxOEYJcpxtzIjufJchFKixZZAG2cu/3PjIIQjAPyZkJGM2PYLS9u66pCP3iye7u6v3sT/Wz5YP6heJU/Lvzxv/wWf0e55SOlhy/0470Za6udXNbc5PDk1tbzD+h5zDwa3uHhqdSY9QbRGT2mp/VZxjdq0grn+L8On8rk/djvx/0pQ0/pjB4X7cfqC4B+qWh1ljnO2ttrjbdkV40ZpEMmc/d93Evo3fX1OwHS6R55SZqJAxXgANAV2uXjEdJxAiBP5uDfOMrd+ofn6+j6/9XmY5T9MPZEMR+AAYax/wW7M/unsTvmFJ8L1KW4PMwKYot1iLuPq1WLXxWg1a8pJB2dYwnVOhJIqgxAVm0IUTBTUKHOElSqtgG1JnWtr9OGQ6LUYMKmBKHZE0gafYOs2UtEwfyECp3+QaXmQFDrWMTvWGckaFgbJxZB7Ng6i6mNeWWkFWEifpQomtvC01yOmyTcR+24pLA47+8iXsKnmOPzK6VCyFjmzIM7pfOI282wypmT2EShQwi1tqhIrnqnQhvzQJgdHGEhEHaY1SyMsmG8ZFpaCCv8/ihCoXGz4A0JPdpJBOdDu8dKFCrugOgSeTsl3MpjfPwUpQRBhsk4xgPrlAyEG3oYTK0e5kTYCIUcA1yqWkVKIbmrqHB5iecN10EtsLFEihwlKpS71GNJOP0ecw46pzErtbCoj+YtLi0rKa8MUm/JzLwAAAAA') format('woff2'),
+  url('iconfont.woff?t=1608796005333') format('woff'),
+  url('iconfont.ttf?t=1608796005333') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1608796005333#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-mima:before {
+  content: "\e62f";
+}
+
+.icon-iconfontzhizuobiaozhun023146:before {
+  content: "\e694";
+}
+
+.icon-person:before {
+  content: "\e629";
+}
+
