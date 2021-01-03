@@ -6,6 +6,62 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "4293103",
+      "name": "数据",
+      "font_class": "shuju",
+      "unicode": "e76c",
+      "unicode_decimal": 59244
+    },
+    {
+      "icon_id": "4933382",
+      "name": "商品",
+      "font_class": "shangpin",
+      "unicode": "e74e",
+      "unicode_decimal": 59214
+    },
+    {
+      "icon_id": "7145697",
+      "name": "权限",
+      "font_class": "quanxian",
+      "unicode": "e644",
+      "unicode_decimal": 58948
+    },
+    {
+      "icon_id": "7450655",
+      "name": "用户",
+      "font_class": "yonghu",
+      "unicode": "e667",
+      "unicode_decimal": 58983
+    },
+    {
+      "icon_id": "14559282",
+      "name": "单据",
+      "font_class": "danju",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "8017652",
+      "name": "bimviz",
+      "font_class": "bimviz",
+      "unicode": "e6d4",
+      "unicode_decimal": 59092
+    },
+    {
+      "icon_id": "1317239",
+      "name": "底部导航栏_星球_跳转发现页",
+      "font_class": "dibudaohanglan_xingqiu_tiaozhuanfaxianye",
+      "unicode": "e62d",
+      "unicode_decimal": 58925
+    },
+    {
+      "icon_id": "18939015",
+      "name": "视频",
+      "font_class": "shipin",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
       "icon_id": "7964497",
       "name": "密码",
       "font_class": "mima",
