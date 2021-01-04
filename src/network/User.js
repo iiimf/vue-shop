@@ -47,3 +47,13 @@ export function DeleteUserById(id){
 		method:"delete"
 	})
 }
+
+export function ChangeUserRole(userId,roleid){
+	return request({
+		url:"/users/"+userId+"/role",
+		data:{
+			rid:roleid
+		},
+		method:"put"
+	})
+}

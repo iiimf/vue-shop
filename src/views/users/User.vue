@@ -40,7 +40,7 @@
             <el-button type="danger" icon="el-icon-delete" size="mini" @click="removeUserById(scope.row.id)"></el-button>
 <!--            带提示文字的按钮-->
             <el-tooltip effect="dark" content="分配角色" placement="top" :enterable="false">
-              <el-button type="warning" icon="el-icon-setting" size="mini"></el-button>
+              <el-button type="warning" icon="el-icon-setting" size="mini" @click="showDistributeRoleDialog(scope.row)"></el-button>
             </el-tooltip>
           </template>
         </el-table-column>
@@ -95,12 +95,28 @@
           <el-button type="primary" @click="EditUserInfo">确 定</el-button>
         </span>
     </el-dialog>
-
+<!--分配角色对话框-->
+    <el-dialog title="分配角色" :visible.sync="RolesdialogVisible" width="50%">
+      <div>
+        <p>当前的用户:{{userInfo.username}}</p>
+        <p>当前的角色:{{userInfo.role_name}}</p>
+        <p>分配新角色:
+        <el-select v-model="selectdRoleId" placeholder="请选择">
+          <el-option v-for="item in roleslist" :key="item.id" :label="item.roleName" :value="item.id"></el-option>
+        </el-select>
+        </p>
+      </div>
+      <span slot="footer" class="dialog-footer">
+    <el-button @click="RolesdialogVisible = false">取 消</el-button>
+    <el-button type="primary" @click="saveSelectedRoleInfo">确 定</el-button>
+  </span>
+    </el-dialog>
   </div>
 </template>
 
 <script>
-import {getUserList,ChangeUserState,addUser,getUserById,ChangeUserInfo,DeleteUserById} from "network/User";
+import {getUserList,ChangeUserState,addUser,getUserById,ChangeUserInfo,DeleteUserById,ChangeUserRole} from "network/User";
+import {getRolesList} from "network/Roles"
 
 export default {
   name: "User",
@@ -168,7 +184,14 @@ export default {
           {required:true,message:"请输入手机号码",trigger:'blur'},
           {validator:checkMobile,trigger: 'blur'}
         ]
-      }
+      },
+      RolesdialogVisible:false,
+      //需要被分配角色的用户信息
+      userInfo:{},
+      //角色列表
+      roleslist:[],
+      //选中的角色
+      selectdRoleId:""
     }
   },
   created() {
@@ -266,6 +289,27 @@ export default {
           message:"已取消删除"
         });
       })
+    },
+    async showDistributeRoleDialog(userInfo){
+      this.userInfo = userInfo
+      const res = await getRolesList()
+      if(res.meta.status !== 200){
+        return this.$message.error(res.meta.msg)
+      }
+      this.roleslist = res.data
+      this.RolesdialogVisible = true
+    },
+    async saveSelectedRoleInfo(){
+      if(!this.selectdRoleId){
+        return this.$message.error("请选择要分配的角色")
+      }
+      const res = await ChangeUserRole(this.userInfo.id,this.selectdRoleId)
+      if(res.meta.status !== 200){
+        return this.$message.error(res.meta.msg)
+      }
+      this.$message.success(res.meta.msg)
+      this.RolesdialogVisible = false
+      this.getUserLists()
     }
 
   }
