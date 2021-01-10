@@ -13,7 +13,7 @@
         </el-col>
       </el-row>
 <!--      表格区域-->
-      <tree-table :data="cateList" :columns="columns"
+      <tree-table :data="cateList" :columns="columns" v-loading="loading"
                   :selection-type="false" :expand-type="false" show-index index-text="" border class="tree-table">
 <!--        是否有效-->
         <template slot="isOk" slot-scope="scope">
@@ -128,7 +128,8 @@ export default {
         children:"children"
       },
       //选中的父级分类的id数组
-      selectedKeys:[]
+      selectedKeys:[],
+      loading:true
     }
   },
   methods:{
@@ -139,6 +140,7 @@ export default {
       }
       this.cateList = res.data.result
       this.total = res.data.total
+      this.loading = false
     },
     handleSizeChange(newpagesize){
       this.queryInfo.pagesize = newpagesize
@@ -204,6 +206,10 @@ export default {
 <style scoped>
 .tree-table{
   margin-top:15px;
+}
+
+.el-cascader{
+  width:100%
 }
 
 </style>

@@ -14,7 +14,7 @@
         </el-col>
       </el-row>
 <!--      角色列表-->
-      <el-table :data="roleslist">
+      <el-table :data="roleslist" v-loading="loading">
         <el-table-column type="expand">
           <template slot-scope="scope">
             <el-row v-for="(role1,index) in scope.row.children" :class="['vcenter','bdbottom',index === 0 ? 'bdtop' :'']">
@@ -86,7 +86,8 @@ export default {
       },
       RightdialogVisible:false,
       defKeys:[],
-      DisstributeroleId:""
+      DisstributeroleId:"",
+      loading:true
     }
   },
   methods:{
@@ -96,6 +97,7 @@ export default {
         return this.$message.error(res.meta.msg)
       }
       this.roleslist = res.data
+      this.loading = false
     },
     async removeRightById(role,rightid){
       const confirmResult = await this.$confirm("此操作将永久删除该权限，是否继续？","提示",{

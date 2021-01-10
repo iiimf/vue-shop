@@ -21,7 +21,7 @@
         </el-row>
       </div>
 <!--      用户列表区域-->
-      <el-table :data="userList" border stripe>
+      <el-table :data="userList" border stripe v-loading="loading">
 <!--        索引列-->
         <el-table-column type="index"></el-table-column>
         <el-table-column label="姓名" prop="username"></el-table-column>
@@ -191,7 +191,8 @@ export default {
       //角色列表
       roleslist:[],
       //选中的角色
-      selectdRoleId:""
+      selectdRoleId:"",
+      loading:true
     }
   },
   created() {
@@ -203,9 +204,12 @@ export default {
       if(result.meta.status === 200){
         this.userList = result.data.users
         this.total = result.data.total
+        this.loading = false
       }else{
+        this.loading = false
         return this.$message.error(result.meta.msg)
       }
+
     },
     //监听pagesize的变化
     handleSizeChange(newsize){
