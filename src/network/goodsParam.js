@@ -40,8 +40,6 @@ export function EditParam(cate_id,attr_id,attr_name,attr_sel){
 }
 
 export function DeleteParam(cate_id,attr_id){
-	console.log(cate_id);
-	console.log(attr_id);
 	return request({
 		url:"/categories/"+cate_id+"/attributes/"+attr_id,
 		method:"delete"
